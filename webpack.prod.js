@@ -11,15 +11,15 @@ module.exports = merge(commonConfig, {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src/assets/images/*"),
-          to: path.resolve(__dirname, "dist"),
-          context: "src",
-        },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, "src/assets/images/*"),
+    //       to: path.resolve(__dirname, "dist"),
+    //       context: "src",
+    //     },
+    //   ],
+    // }),
   ],
   module: {
     rules: [

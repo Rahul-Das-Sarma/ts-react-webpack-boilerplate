@@ -18,23 +18,6 @@ module.exports = merge(commonConfig, {
   module: {
     rules: [
       {
-        test: /\.(js|jsx|ts|tsx)$/,
-        include: path.resolve(__dirname, "src"),
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "babel-loader",
-            options: {
-              presets: [
-                "@babel/preset-env",
-                "@babel/preset-react",
-                "@babel/preset-typescript",
-              ],
-            },
-          },
-        ],
-      },
-      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },

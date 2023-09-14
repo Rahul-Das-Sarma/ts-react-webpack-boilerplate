@@ -23,6 +23,23 @@ module.exports = {
         test: /\.(jpg|png|jpeg|gif)$/,
         type: "asset/resource",
       },
+      {
+        test: /\.(js|jsx|ts|tsx)$/,
+        include: path.resolve(__dirname, "src"),
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                "@babel/preset-env",
+                "@babel/preset-react",
+                "@babel/preset-typescript",
+              ],
+            },
+          },
+        ],
+      },
     ],
   },
   optimization: {
