@@ -7,7 +7,7 @@ module.exports = merge(commonConfig, {
   mode: "development",
   devServer: {
     static: {
-      directory: path.resolve(__dirname, "dist"),
+      directory: path.resolve(__dirname, "..", "public"),
     },
     port: port,
     historyApiFallback: true,
